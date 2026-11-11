@@ -1,0 +1,28 @@
+例题：把m个同样的炮弹装入n个同样的炮口里，允许有的炮口空着不装，问共有多少种不同的方案。（5,1,1和1,1,5是同一种方案）
+
+代码：
+
+#include <iostream>
+using namespace std;
+int m, n, f[15][15];
+int main()
+{
+    cin >> m >> n;
+    f[0][0] = 1;
+    for (int i=0;i<=m;i++ )
+    {
+        for (int j=1;j<=n;j++)
+        {
+            if (i>=j)
+            {
+                f[i][j]=f[i-j][j]+f[i][j-1];
+            }
+            else
+            {
+                f[i][j]=f[i][i];
+            }
+        }
+    }
+    cout << f[m][n];
+    return 0;
+}

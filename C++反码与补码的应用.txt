@@ -1,0 +1,31 @@
+例题：输入用字符串表示的原码，求这个原码对应的反码表示。最高位符号位是从右往左数第8位。
+
+代码：
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    if (s[0]=='0')
+    {
+        cout<<s;
+    }
+    else
+    {
+        cout<<1;
+        for (int i=1;i<s.length();i++)
+        {
+            if (s[i]=='0')
+            {
+                cout<<1;
+            }
+            else
+            {
+                cout<<0;
+            }
+        }
+    }
+    return 0;
+}

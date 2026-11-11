@@ -1,0 +1,21 @@
+例题：石头剪刀布是一个简单的游戏，A和B在玩石头剪刀布。S表示石头，J表示剪刀，B表示布。使用两个字符串分别表示A和B的出拳。求A赢了多少次？
+
+代码：
+
+#include <bits/stdc++.h>
+using namespace std;
+int ans;
+string a,b;
+int main()
+{
+    cin>>a>>b;
+    for (int i=0;i<a.length();i++)
+    {
+        if (a[i]=='S'&&b[i]=='J'||a[i]=='J'&&b[i]=='B'||a[i]=='B'&&b[i]=='S')
+        {
+            ans++;
+        }
+    }
+    cout<<ans;
+    return 0;
+}

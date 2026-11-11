@@ -1,0 +1,24 @@
+例题：桃子很喜欢数字3、5、7。如果一个数字的个位上的数是3或者5或者7。那么桃子就喜欢这个数字。现在禾木告诉了桃子3个数字a、b、c。请你判断其中有几个数是桃子喜欢的吧~
+
+代码：
+
+#include<bits/stdc++.h>
+using namespace std;
+bool xh(int a)
+{
+    if (a%10==3||a%10==5||a%10==7)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int main()
+{
+	int a,b,c;
+    cin>>a>>b>>c;
+    cout<<xh(a)+xh(b)+xh(c);
+	return 0;
+}

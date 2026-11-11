@@ -1,0 +1,19 @@
+例题：给定一个十进制整数n、一个表示进制的整数m和一个以字符串形式表示的m进制数s，计算它们相加后的结果，并以十进制形式输出。
+
+代码：
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int ans = 0, digit = 1, m, n;
+    string num;
+    cin>>n>>m>>num;
+    for (int i=num.length()-1;i>=0;i--)
+    {
+        ans+=(num[i]-'0')*digit;
+        digit*=m;
+    }
+    cout<<n+ans;
+    return 0;
+}

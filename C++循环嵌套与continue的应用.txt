@@ -1,0 +1,30 @@
+例题：输出a~b范围内所有数字的因数，注意有一条特殊规则，如果这个数字是3的倍数，那么就略过。
+
+提示：一个数字的因数能整除这个数，比如10的因数是1 2 5 10。
+
+代码：
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    for (int i=a;i<=b;i++)
+    {
+        if (i%3==0)
+        {
+            continue;
+        }
+        for (int j=1;j<=i;j++)
+        {
+            if (i%j==0)
+            {
+                cout<<j<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+

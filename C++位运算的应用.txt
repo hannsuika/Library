@@ -1,0 +1,13 @@
+例题：某工厂的编号为 num，升级工厂安保措施，需要将 num 所对应的二进制数中，从右往左的第 x 位（从0开始计数）置为 0，请你编写程序，输入 num 和 x ，输出位运算之后的数值变化结果（结果为十进制）
+
+代码：
+
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int num,x;
+    cin>>num>>x;
+    cout<<(~(1<<x)&num);
+    return 0;
+}

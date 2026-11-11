@@ -1,0 +1,30 @@
+例题：两个相差为4的素数称为素数组，例如3和7，13和17，等等。下面请你帮助小核桃找出所有两个数均不大于x的素数组。
+
+代码：
+
+#include <iostream>
+using namespace std;
+int x;
+bool prime(int n)
+{
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int main()
+{
+    cin >> x;
+    for (int i=2;i<x-2;i++)
+    {
+        if (prime(i)&&prime(i+4))
+        {
+            cout<<i<<" "<<i+4
+<<endl;        }
+    }
+    return 0;
+}

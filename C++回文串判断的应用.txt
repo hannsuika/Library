@@ -1,0 +1,36 @@
+例题：给出n个字符串，要求将n个字符串按顺序拼接，拼接之后判断是不是回文串，是就输出yes，不是就输出no。
+
+代码：
+
+#include <iostream>
+using namespace std;
+string s,s1;
+int n;
+bool flag = true;
+int main()
+{
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        cin>>s1;
+        s+=s1;
+    }
+    int len=s.length();
+    for(int i = 0; i <= len-1; i++)
+    {
+        if( s[i]!=s[len-i-1]       )
+        {
+            flag=false;
+            break;
+        }
+    }
+    if( flag==true    )
+    {
+       cout<<"yes";
+    }
+    else
+    {
+        cout<<"no";
+    }
+    return 0;
+}

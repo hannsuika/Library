@@ -1,0 +1,17 @@
+例题：输入一个数字字符串，将数字字符串的每个字符向后移动一位，1修改成2，2修改成3，以此类推，9修改成0。输出修改后的结果。
+
+代码：
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s;
+    cin >> s;
+    for (int i=0;i<s.length();i++)
+    {
+        s[i]=(s[i]-'0'+1)%10+'0';
+    }
+    cout<<s;
+    return 0;
+}

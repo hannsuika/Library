@@ -1,0 +1,30 @@
+例题：输入n个小数，对这n个数字分别进行四舍五入，请你输出这n个数字中四舍五入的结果分别与向上取整和向下取整相等的个数。
+
+代码：
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int n,sum1=0,sum2=0;
+    double num;
+    cin >> n;
+    for(int i = 1; i <= n; i++)
+    {
+        cin >> num;
+        int a,b,c;
+        a=round(num);
+        b=ceil(num);
+        c=floor(num);
+        if(a==b   )
+        {
+            sum1++;
+        }
+        if (a==c)
+        {
+            sum2++;
+        }
+    }
+    cout<<sum1<<" "<<sum2;
+    return 0;
+}

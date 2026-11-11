@@ -1,0 +1,31 @@
+例题：给你n个数以及一个数k，请你求出n个数中第k小的数
+
+代码：
+
+#include <iostream>
+using namespace std;
+int a[100],n;
+int main()
+{
+    int k;
+	cin >> n>>k;
+	for (int i = 1; i <= n; i++)
+	{
+		cin >> a[i];
+	}
+	for (int i=1;i<=n-1;i++)
+	{
+	    for (int j=i+1;j<=n;j++)
+	    {
+	        if (a[i]>a[j])
+	        {
+	            int t=a[i];
+	            a[i]=a[j];
+	            a[j]=t;
+	        }
+	    }
+	}
+    
+    cout<<a[k];
+	return 0;
+}
